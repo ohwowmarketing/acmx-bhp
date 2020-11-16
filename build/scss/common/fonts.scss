@@ -1,0 +1,64 @@
+$GTSuper : "../fonts/gt-super/";
+$Raleway : "../fonts/raleway/";
+
+// GT Super
+@font-face {
+    font-family: 'GT Super Bold';
+    src: local('GT Super Display Bold'), local('GT-Super-Display-Bold'),
+        url('#{$GTSuper}GT-Super-Display-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'GT Super Light';
+    src: local('GT Super Display Light'), local('GT-Super-Display-Light'),
+        url('#{$GTSuper}GT-Super-Display-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+    text-rendering: optimizeLegibility;
+}
+
+// Raleway
+@font-face {
+    font-family: 'Raleway Light';
+    src: local('Raleway Light Regular'), local('Raleway-Light'),
+        url('#{$Raleway}raleway-light-webfont.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'Raleway Regular';
+    src: local('Raleway Regular'), local('Raleway-Regular'),
+        url('#{$Raleway}raleway-regular-webfont.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'Raleway SemiBold';
+    src: local('Raleway SemiBold Regular'), local('Raleway-SemiBold'),
+        url('#{$Raleway}raleway-semibold-webfont.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'Raleway ExtraBold';
+    src: local('Raleway ExtraBold Regular'), local('Raleway-ExtraBold'),
+        url('#{$Raleway}raleway-extrabold-webfont.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+    text-rendering: optimizeLegibility;
+}

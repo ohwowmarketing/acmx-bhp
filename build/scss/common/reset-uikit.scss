@@ -1,0 +1,48 @@
+// SlideDot Navigation
+.uk-slideshow-dotnav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0 40px;
+
+    .uk-dotnav > li {
+        position: relative;
+    }
+
+    .uk-dotnav > * > * {
+        background: rgba(#FFF, 0.50);
+        margin: 0 5px;
+        border: 0;
+    }
+
+    .uk-dotnav > .uk-active > * {
+        background: rgba(#FFF, 1);
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: calc(50% - 15px);
+            left: calc(50% - 9px);
+            display: block;
+            @include size(30px);
+            box-shadow: 0 0 0 1px rgba(#FFF, 1);
+            border-radius: 50%;
+        }
+    }
+
+    &._alt {
+
+        .uk-dotnav > * > * {
+            background: rgba(#000, 0.20);
+        }
+
+        .uk-dotnav > .uk-active > * {
+            background: rgba($bhp-blue, 1);
+
+            &::before {
+                box-shadow: 0 0 0 1px rgba(#888, 1);
+            }
+        }
+
+    }
+}

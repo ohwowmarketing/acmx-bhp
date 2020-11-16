@@ -1,0 +1,322 @@
+[data-hero="home"] {
+    position: relative;
+    margin-top: -71px;
+    z-index: 0;
+
+    .uk-slideshow-caption {
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        height: calc(100% - (65px + 60px));
+
+        .uk-container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100%;            
+        }
+
+        h1 {
+            font-family: $gtbold;
+            font-size: 2rem;
+            color: #FFF;
+            margin: 0;
+        }
+    }
+
+    .uk-slideshow-dotnav {
+        position: absolute;
+        bottom: 60px;
+        left: auto;
+
+        .uk-slideshow-nav {
+            width: 100%;
+            max-width: 1600px;
+        }        
+    }
+
+    @media ( min-width: 640px ) {
+
+        .uk-slideshow-caption {
+            height: calc(100% - (65px + 230px));
+
+            h1 {
+                font-size: 2.625rem;
+            }
+        }
+
+        .uk-slideshow-dotnav {
+            bottom: 230px;
+        }
+
+    }
+
+    @media ( min-width: 1400px ) {
+
+        .uk-slideshow-caption h1 {
+            font-size: 3.25rem;
+        }
+
+        .uk-slideshow-dotnav {
+            bottom: 230px;
+        }
+
+    }
+
+}
+
+// Success Story
+.success-story {
+    position: relative !important;
+    top: 0;
+    bottom: auto;
+    background: rgba($bhp-blue, 1);
+    margin: 0;
+    min-height: 180px;
+
+    .uk-flex {
+        flex-direction: column;
+        max-width: 100%;
+        height: 100%;
+        padding: 0 15px;
+
+        > div {
+            flex: 1 0 100%;
+            align-self: center;
+            text-align: center;
+            width: 100%;
+            padding: 15px;
+        
+            &:nth-child(odd) {
+                h3 {
+                    font-size: 32px;
+                    line-height: 1;
+                    margin-bottom: 10px;
+                }
+            }
+
+            &:nth-child(even) {
+                border: solid rgba(#888, 0.85);
+                border-width: 1px 0;
+
+                h3 {
+                    font-size: 24px;
+                }
+            }
+        }
+
+        h3, ul {
+            font-family: $regular;
+            margin: 0;
+        }
+
+        ul {
+            list-style: none;
+            font-size: 14px;
+            padding: 0;
+        }
+    }
+
+    @media ( min-width: 640px ) {
+        position: absolute !important;
+        top: auto;
+        bottom: 0;
+        background: rgba($bhp-blue, 0.85);
+        height: 180px;
+
+        .uk-flex {
+            flex-direction: row;
+            padding: 0;
+
+            > div {
+                flex: 1 0 calc(100% / 3);
+
+                &:nth-child(even) {
+                    border-width: 0 1px;
+                }
+            }
+        }
+    }
+
+    @media ( min-width: 1200px ) {
+        .uk-flex {
+            max-width: 800px;
+        }
+    }
+
+}
+
+// Featured Property Widget
+.featured-property {
+    position: relative;
+    background: transparent;
+    margin-top: 0;
+    z-index: 1000;
+
+    .uk-container-xlarge {
+        padding: 0;
+    }
+
+    .uk-cover-container canvas {
+        min-height: 550px;
+    }
+
+    .uk-overlay-primary {
+        background: rgba(34,34,34,.5);
+        z-index: 1000;
+    }
+
+    figcaption {
+        position: absolute;
+        bottom: 30px;
+        color: rgba(#FFF, 0.8);
+        margin-top: 0;
+        padding: 60px 40px;
+        z-index: 1000;
+    
+        small {
+            display: block;
+            font-size: 14px;
+            color: #CCC;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            font-family: $gtlight;
+            font-size: 36px;
+            color: #FFF;
+            line-height: 1;
+            margin: 5px 0 15px;
+        }
+    }
+
+    .uk-slideshow-dotnav {
+        position: absolute;
+        bottom: 30px;
+        right: auto;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        .uk-text-meta {
+            position: relative;
+            top: 2px;
+            color: #595959;
+            margin-right: 25px;
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        .uk-dotnav > * > * {
+            background: rgba(#FFF, 0.50) !important;
+        }
+
+        .uk-dotnav > .uk-active > * {
+            background: rgba(#FFF, 1) !important;
+        }
+
+    }
+
+    @media ( min-width: 1200px ) {
+        margin-top: -180px;
+        padding: 0 40px;
+
+        .uk-overlay-primary {
+            background: rgba(34,34,34,0);
+        }
+
+        figcaption {
+            position: relative;
+            color: #444;
+            margin-top: 180px;
+
+            small {
+                color: #888;
+            }
+
+            h3 {
+                color: #444;
+            }
+        }
+
+        .uk-slideshow-dotnav {
+            bottom: 0;
+            right: auto;
+
+            .uk-dotnav > * > * {
+                background: rgba(#000, 0.20) !important;
+            }
+
+            .uk-dotnav > .uk-active > * {
+                background: rgba($bhp-blue, 1) !important;
+            }
+        }
+    }
+}
+
+[data-hero="page"],
+[data-hero="news"] {
+
+    canvas {
+        min-height: 414px;
+    }
+
+    .uk-overlay {
+        @include size(100%);
+        max-width: calc( 1600px + 80px );
+        z-index: 1000;
+    }
+
+    .uk-overlay hgroup {
+        position: absolute;
+        left: 0;
+        bottom: 65px;
+        color: #FFF;
+        margin: 0;
+        padding-left: 40px;
+        padding-right: 40px;
+        z-index: 102;
+
+        small {
+            display: block;
+            font-family: $light;
+            font-size: 1rem;
+            line-height: 1.2;
+            letter-spacing: 0.15rem;
+        }
+
+        h2 {
+            font-family: $gtlight;
+            font-size: 3.75rem;
+            color: #FFF;
+            line-height: 1;
+            margin: 0;
+        }
+    }
+
+    .uk-overlay-primary {
+        background: linear-gradient(to bottom, rgba(#000,0.85), rgba(#000,0));
+        z-index: 100;
+    }
+
+    .hero-text-fade {
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        font-family: $xbold;
+        font-weight: 900;
+        font-size: 10.5vw;
+        color: #FFF;
+        text-transform: uppercase;
+        line-height: 0.8;
+        opacity: 0.1;
+        pointer-events: none;
+        z-index: 101;
+    }
+
+}
+
+[data-hero="map"] {
+    height: calc(100vh - (65px + 50px));
+}
