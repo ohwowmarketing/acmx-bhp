@@ -28,7 +28,7 @@ if ( function_exists( 'acf_add_options_page' ) ) :
         'page_title'  => 'Theme Fragments',
         'capability'  => 'edit_posts',
         'icon_url'    => 'dashicons-layout',
-        'position'    => '20',
+        'position'    => '25',
         'redirect'    => true
     ]);
 
